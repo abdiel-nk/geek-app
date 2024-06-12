@@ -1,0 +1,221 @@
+@import url('./header.css');
+@import url('./footer.css');
+
+:root {
+    --fuente-principal: 'Montserrat', sans-serif;
+    --fuente-logo: 'Inter', sans-serif;
+    --azul-claro: #3b82f6;
+    --black: #000000;
+    --white: #FFFFFF;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    color: var(--black);
+    font-size: 16px;
+}
+.encabezado {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    background: var(--azul-claro);
+}
+.encabezado h1{
+    display: flex;
+}
+.encabezado a{
+    width: 30px;
+    margin-left: 1rem;
+}
+
+
+.encabezado-lista {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-basis: 100%;
+    font-size: 18px;
+    margin: 0 2em;
+}
+
+.encabezado__logo-inicio {
+    font-family: var(--fuente-logo);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+}
+
+.encabezado__logo-final {
+    font-weight: 400;
+    font-style: italic;
+}
+
+.encabezado__buscar {
+    border: 2px solid #3a89ad;
+    border-radius: 20px;
+    padding: .7em 1em;
+    width: 20vw;
+    outline: none;
+}
+
+.encabezado__buscar::placeholder {
+    font-size: 18px;
+    background: url("../img/magnifying-glass-solid.svg") no-repeat 95% center;
+}
+
+.encabezado-lista__item a {
+    text-decoration: none;
+}
+
+.encabezado-lista__link {
+    color: var(--white);
+    font-size: 1.2rem;
+    font-weight: 600;
+
+}
+
+.encabezado-lista__item-boton {
+    font-weight: 600;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    padding: .5em 1em;
+    color: var(--white);
+    border: var(--azul-claro) 2px solid;
+}
+
+.encabezado-lista__item-boton--azul {
+    background-color: var(--azul-claro);
+    color: var(--white);
+}
+/*banner*/
+
+.banner {
+    background-image: url("https://cdn.pixabay.com/photo/2023/08/01/08/21/waterfall-8162449_1280.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: center;
+}
+.banner .banner__titulo{
+    font-weight: 600;
+    color: var(--white);
+    font-size: 32px;
+    line-height: 39px;
+}
+.banner h4{
+    font-weight: 600;
+    color: var(--white);
+    font-size: 15px;
+    line-height: 39px;
+}
+/*footer*/
+.pie-pagina{
+    justify-content: space-around;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 3em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    align-items: center;
+    font-size: 18px;
+}
+.pie-pagina .section{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.pie-pagina a{
+    width: 30px;
+    margin-left: 1rem;
+}
+.pie-pagina a img{
+    width: 30px;
+    height: 30px;  
+}
+.pie_pagina__lista li {
+    margin: 1em 0;
+}
+
+.pie_pagina__link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration: none;
+    color: var(--white);
+}
+
+
+.copyright{
+    display: flex;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+}
+.copyright p{
+    padding-top: 2rem;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+@media screen and (max-width: 900px) {
+    .encabezado {
+        padding: 2em;
+        
+    }
+
+    .encabezado__buscar,
+    .encabezado-lista__link {
+        display: block;
+        width: 100%;
+    }
+
+    .encabezado-lista__item-boton {
+        display: none;
+    }
+    
+    
+}
+@media screen and (max-width: 580px){
+    .encabezado{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .encabezado h1{
+        padding-bottom: 1rem;
+    }
+    .encabezado__buscar::placeholder{
+       align-items: center;
+    }
+    .pie-pagina{
+        display: flex;
+        font-size: 18px;
+        flex-direction: column;
+    }
+    .pie-pagina .section{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .pie-pagina .list{
+        display: flex;
+        gap: 1rem;
+    }
+    .pie-pagina .list .pie_pagina__lista{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
